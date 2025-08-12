@@ -37,6 +37,24 @@ And then push the changes to the `main` branch.
 
 ## Project Structure
 
+- The site is published from the dist/ directory via GitHub Actions. The live URL is typically:
+
+https://nickcoury.github.io/web-easing-curves/
+
+If you want to customize the domain, set a CNAME and update Pages settings accordingly.
+
+### Quick Start (copy-paste)
+
+- Install: `npm install`
+- Build: `npm run build`
+- Serve locally: `npm run dev:static` (port 5173) or `npx live-server dist` (default port)
+- Smoke test: `npm run smoke` (builds and verifies dist/main.js exists)
+- Deploy: push to main; GitHub Actions will publish dist to Pages
+
+## Project Structure
+
+- The site is published from dist/ via GitHub Actions.
+
 - `src/` - Source files
   - `index.html` - Main HTML file
   - `main.ts` - Main TypeScript file

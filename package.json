@@ -4,10 +4,14 @@
   "description": "A web app for visualizing easing curves",
   "main": "dist/main.js",
   "type": "module",
-  "scripts": {\n    "build": "tsc && mkdir -p dist/assets && cp -r src/assets dist/assets 2>/dev/null || true && cp -f src/index.html dist/index.html || true",
+  "scripts": {
+    "build": "tsc && mkdir -p dist/assets && cp -r src/assets dist/assets 2>/dev/null || true && cp -f src/index.html dist/index.html || true",
     "dev": "concurrently \"tsc --watch\" \"live-server src\"",
     "preview": "live-server dist",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "smoke": "node -e \"require('fs').statSync('dist/main.js'); console.log('OK');\"",
+    "dev:static": "npx live-server dist --port=5173",
+    "test-build": "npm run build && npm run smoke"
   },
   "keywords": [],
   "author": "",
