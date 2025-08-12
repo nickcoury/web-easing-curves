@@ -1,0 +1,21 @@
+{
+  "name": "web-easing-curves",
+  "version": "1.0.0",
+  "description": "A web app for visualizing easing curves",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && cp -r src/assets dist/assets 2>/dev/null || mkdir -p dist/assets",
+    "dev": "concurrently \"tsc --watch\" \"live-server src\"",
+    "preview": "live-server dist",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "live-server": "^1.2.0",
+    "typescript": "^4.9.5"
+  }
+}
