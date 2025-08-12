@@ -4,8 +4,7 @@
   "description": "A web app for visualizing easing curves",
   "main": "dist/main.js",
   "type": "module",
-  "scripts": {
-    "build": "tsc && cp -r src/assets dist/assets 2>/dev/null || mkdir -p dist/assets",
+  "scripts": {\n    "build": "tsc && mkdir -p dist/assets && cp -r src/assets dist/assets 2>/dev/null || true && cp -f src/index.html dist/index.html || true",
     "dev": "concurrently \"tsc --watch\" \"live-server src\"",
     "preview": "live-server dist",
     "clean": "rm -rf dist"
