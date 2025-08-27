@@ -1,0 +1,14 @@
+#curve-editor {
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+#curve-values {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+}

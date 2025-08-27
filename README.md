@@ -46,13 +46,6 @@ A modern, free, and open-source tool for creating and fine-tuning CSS easing cur
 
 ## 🚀 Quick Start
 
-### Using the Tool
-1. Visit [https://nickcoury.github.io/web-easing-curves](https://nickcoury.github.io/web-easing-curves)
-2. Start with the default curve or click **+ Add Curve**
-3. Choose your curve type and adjust parameters
-4. Copy the CSS output or share the URL
-5. Use in your projects!
-
 ### Local Development
 ```bash
 # Clone the repository
@@ -135,9 +128,13 @@ web-easing-curves/
 │   ├── physics.js           # Spring physics engine
 │   ├── export.js            # CSS/JSON generation
 │   ├── url-state.js         # URL hash management
-│   └── utils.js             # Utilities
+│   ├── ui.js                # DOM manipulation utilities
+│   ├── utils.js             # Utilities
+│   └── curve.js             # Curve class
+│   └── curve-manager.js     # Curve manager class
 ├── styles/
 │   ├── main.css            # Core styles
+│   ├── curve-editor.css    # Canvas editor specific styles
 │   └── components.css      # UI components
 ├── curves/
 │   └── presets.json        # Built-in curve library
